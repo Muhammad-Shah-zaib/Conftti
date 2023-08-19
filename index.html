@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            position: relative;
+            height: 500px;
+            padding: 50px 100px ;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 1.2rem;
+            background-color: #838383;
+            color: rgb(255, 242, 59);
+            font-weight: 900;
+            cursor: pointer;
+        }
+        .popup {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.93rem;
+            background-color: rgb(25, 43, 59);
+            color: #ccc;
+            padding: 20px;
+            text-align: center;
+            width: 400px;
+            height: 400px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1), 0 0 0 1000px rgba(0, 0, 0, 0.95);
+            visibility: hidden;
+        }
+        b {
+            font-size: 1.2rem;
+            font-style: italic;
+            font-family:  Courier, monospace;
+            position: absolute;
+            top:0;
+            right: 0;
+            padding: 10px 15px;
+            background-color: rgba(255, 62, 62, 0.767);
+            color: white;
+            cursor: pointer;
+        }
+
+        canvas{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: 5;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <!-- <h1>CONGRATS !! </h1> -->
+        <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi quas voluptatum iure error, accusantium at doloremque quae fuga harum dolore beatae magni cum iusto temporibus consequuntur, facere, eum voluptate sed quia unde provident nemo cupiditate? Sunt quae aut id asperiores laboriosam, in consectetur minus a ipsa autem, dolores quidem esse ea fugit numquam cupiditate, ab veritatis? Dolores aut id tenetur iure libero vero officia odio facilis quis, ab corporis quibusdam officiis nostrum dolorem obcaecati maxime quo quos dolor voluptas aliquid. Fuga consectetur deserunt voluptatum impedit laudantium nobis ab earum quae architecto nihil, cumque deleniti officiis voluptatibus natus nam, repudiandae error, dolor rerum neque voluptate nisi vero ipsam! Officia voluptatibus veniam architecto modi quo ducimus, illum itaque dolorum corrupti accusantium blanditiis dolorem nobis, quibusdam unde, dolor molestiae minus? Voluptatum rem ab possimus aperiam adipisci, velit id fugit modi quidem, est accusantium voluptatem harum odio. Dolor reprehenderit velit quidem, tenetur eum quos doloribus harum earum recusandae. Quidem atque maiores repudiandae alias nihil earum, iusto sequi nobis aliquid, labore mollitia. Omnis dignissimos earum repellat soluta a fuga excepturi illum reprehenderit incidunt, architecto molestias quasi officiis necessitatibus nobis aperiam explicabo deleniti aliquam quo? Dolorum distinctio, quas earum sunt quod commodi harum necessitatibus? Corrupti ipsam excepturi, ut impedit repellendus itaque vel nostrum est, officia placeat eos? Nostrum molestias corporis omnis voluptate soluta? Sapiente fuga cupiditate atque reprehenderit possimus adipisci non sed distinctio corrupti mollitia, omnis excepturi vel maiores eaque enim voluptatum temporibus. Quas quibusdam, qui voluptas autem et, facilis dolor ducimus doloribus eveniet totam excepturi beatae officiis ipsum blanditiis quod expedita tempore. Vero architecto ducimus at consequatur accusamus dolorum harum quidem sunt. Animi labore pariatur consequatur illum a exercitationem molestias ea, illo ducimus sint facere, laudantium eius dolor rem facilis, nobis possimus eligendi reiciendis mollitia asperiores neque natus vero atque. Esse, in! Nisi tempore maxime harum. Non consequuntur, sint, maiores consequatur corrupti quibusdam officiis ipsa ipsum nostrum sequi ex maxime. Commodi aspernatur quas tempora incidunt itaque praesentium id repudiandae impedit saepe, maiores numquam delectus doloribus aliquam veniam porro beatae officia distinctio asperiores soluta. Cumque reprehenderit nesciunt sunt praesentium quo, necessitatibus optio dicta nihil totam et nam sit ullam ipsam, magnam adipisci alias, voluptates ipsa eveniet aspernatur! Vero ea doloribus dicta. Ipsum, cupiditate. Cum repudiandae ratione qui, dolorem quisquam quos id? Eveniet rem quis autem tenetur nemo sunt velit laudantium dolore soluta numquam veniam sed sint, debitis expedita! Iure consectetur ipsa eos, tempora fuga excepturi dicta sunt molestiae voluptas, velit architecto culpa minus veritatis nulla corporis repellat obcaecati, dignissimos beatae! Iure fugit aspernatur quasi unde, harum architecto expedita id ab nam dolores nihil praesentium cupiditate molestias nobis repellat totam laborum quae soluta officiis placeat temporibus tempore sunt libero. Laborum, hic. Provident itaque quasi deserunt qui totam et nostrum similique vel esse possimus quisquam numquam, maxime, ut atque! Libero doloremque delectus culpa voluptates dicta harum, cumque facere quae aut vero reiciendis dolorum eligendi! Fugiat sint maxime, eligendi aut, deleniti iusto quis adipisci cum asperiores soluta molestiae distinctio harum qui architecto dolores maiores sunt natus voluptatem animi voluptate.</p> -->
+        <button class="btn">Congratsss...!</button>
+
+        <div class="popup">
+            <h3>STAGE KHATAM... 🎉WUHOOO!🎉🎉</h3>
+            <b class="close">x</b>
+        </div>
+    </section>
+
+    <canvas id="my-canvas"></canvas>
+    <script src="confetti.js"></script>
+    <script>
+        let btn = document.querySelector('.btn')
+        let popup = document.querySelector('.popup')
+        let closePopup = document.querySelector('.close')
+        let canvas = document.querySelector('#my-canvas')
+        console.log(closePopup)
+        btn.addEventListener('click', function () {
+            popup.style.visibility = 'visible'
+            canvas.style.visibility = 'visible'
+        })
+
+        closePopup.addEventListener('click', function () {
+            popup.style.visibility = 'hidden'
+            canvas.style.visibility = 'hidden'
+        })
+
+
+
+        var confettiSettings = {target : 'my-canvas'}
+        var confetti = new ConfettiGenerator(confettiSettings)
+        confetti.render()
+    </script>
+</body>
+</html>
